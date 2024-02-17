@@ -1,0 +1,99 @@
+#include <iostream>
+using namespace std;
+
+
+int Factorial(int n){
+
+    int fact = 1;
+
+    for(int i = 1; i <= n; i++){
+        fact = fact*i;
+    }
+    return fact;
+}
+
+void Display(char caracteres[], int n){
+
+    cout << "[";
+    for(int i = 0; i < n; i++){
+        if(i== n - 1) cout << caracteres[i];
+        else cout << caracteres[i] << ",";
+    }
+    cout << "]" << " ";
+}
+
+void InsertValues(char caracteres[], int n){
+    for(int i = 0; i < n; i++){
+        cout << "caracter " << i + 1<< ": ";
+        cin >> caracteres[i];
+    }
+}
+
+void copyValues(char a[], char b[],int n){
+
+    for(int i = 0; i < n; i++){
+        b[i] = a[i];
+    }
+}
+
+void changeValues(char caracteres[], int j, int maxChanges, int &m){
+
+    if(j!=0 && j!= maxChanges){
+        char aux = caracteres[m];
+        caracteres[m] = caracteres[m+1];
+        caracteres[m+1] = aux;
+    }
+    if(j == maxChanges){
+        char aux = caracteres[m];
+        caracteres[m] = caracteres[1];
+        caracteres[1] = aux;
+        m = 0;
+    }
+}
+
+void Permutacion(char caracteres[], int n){
+
+    const int maxChanges = n - 1;
+    const int spaces =  n - 1;
+
+    char *copyCaracteres = new char[n];
+    copyValues(caracteres,copyCaracteres,n);
+
+    int m;
+    int x = Factorial(spaces);
+
+    for(int i = 0; i < n; i++){
+        m=0;
+        if(i!=0){
+            char aux  = copyCaracteres[0];
+            copyCaracteres[0] = copyCaracteres[i];
+            copyCaracteres[i] = aux;
+            copyValues(copyCaracteres,caracteres,n);
+
+        }
+
+        for(int j = 0; j < x; j++){
+            changeValues(caracteres,j,maxChanges,m);
+            Display(caracteres,n);
+            m++;
+        }
+    }
+}
+
+
+int main() {
+
+    int n;
+    cout << "Digite el tamano del array: "; cin >> n;
+    char *a = new char [n];
+
+    cout << "Ingrese " << n  << " caracteres para llenar el array: " << endl;
+
+    InsertValues(a,n);
+
+    Permutacion(a,n);
+
+
+
+    return 0;
+}

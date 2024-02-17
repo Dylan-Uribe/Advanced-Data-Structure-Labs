@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int FactorialIterativo(int n){
+
+    int fact = 1;
+
+    for(int i = 1; i <= n; i++){
+        fact = fact*i;
+    }
+    return fact;
+}
+
+int FactorialRecursivo(int n){
+
+    return (n==0) ? 1: FactorialRecursivo(n-1) * n;
+
+}
+
+int main() {
+
+   int menu;
+   int n;
+
+    cout << "Digite 1 si quiere hacer la operacion de forma iterativa: " << endl;
+    cout << "Digite 2 si quiere realizar la operacion de forma recursiva: " << endl;
+    cin >> menu;
+
+    switch (menu) {
+        case 1:
+            cout << "Digite el valor del factorial a calcular: "; cin >> n;
+            cout << FactorialIterativo(n);
+            break;
+        case 2:
+            cout << "Digite el valor del factorial a calcular: "; cin >> n;
+            cout << FactorialRecursivo(n);
+            break;
+        default:
+            cout << "No elijio una opcion valida...";
+            break;
+    }
+
+    return 0;
+}

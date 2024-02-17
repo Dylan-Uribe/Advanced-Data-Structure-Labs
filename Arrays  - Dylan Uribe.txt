@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+
+class Array{
+
+public:
+    int size;
+    int capacity;
+    int *a;
+
+    Array(int capacity);
+    void Display();
+    void fill();
+    void sort();
+
+};
+
+Array::Array(int capacity) {
+    this->capacity = capacity;
+    a = new int [capacity];
+    size = 0;
+}
+
+
+void Array::Display() {
+    for(int i = 0; i < size; i++){
+        cout << a[i] << " ";
+    }
+}
+
+void Array::fill() {
+    for(int i = 0; i < capacity; i++){
+        cin >> a[i];
+    }
+    cout << endl;
+    size = capacity;
+}
+
+void Array::sort() {
+    for(int i = 0; i < size - 1;i++){
+        for(int j = i + 1; j < size; j++){
+            if(a[j] < a[i]){
+                int aux = a[i];
+                a[i] = a[j];
+                a[j] = aux;
+            }
+        }
+    }
+}
+
+
+int main() {
+
+    Array arr(6);
+    arr.fill();
+    arr.Display();
+    cout << endl;
+    arr.sort();
+    arr.Display();
+
+    return 0;
+}
