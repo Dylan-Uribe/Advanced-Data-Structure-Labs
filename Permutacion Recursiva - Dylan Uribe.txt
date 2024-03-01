@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+
+void ChangeValues(char A[], int k, int i){
+    char aux = A[k];
+    A[k] = A[i];
+    A[i] = aux;
+}
+
+void InsertValues(char caracteres[], int n){
+    for(int i = 0; i < n; i++){
+        cout << "caracter " << i + 1<< ": ";
+        cin >> caracteres[i];
+    }
+}
+
+void Display(char caracteres[], int n){
+
+    cout << "[";
+    for(int i = 0; i <= n; i++){
+        if(i== n) cout << caracteres[i];
+        else cout << caracteres[i] << ",";
+    }
+    cout << "]" << " ";
+}
+
+void Permutaciones(char A[], int k, int n) {
+    if (k == n) {
+        Display(A,n);
+    } else {
+        for (int i = k; i <= n; i++) {
+            ChangeValues(A,k,i);
+            Permutaciones(A, k + 1, n);
+            ChangeValues(A,k,i);
+        }
+    }
+}
+
+int main() {
+    int n;
+    cout << "Digite el tamano del array: "; cin >> n;
+    char *A = new char [n];
+
+    cout << "Ingrese " << n  << " caracteres para llenar el array: " << endl;
+
+    InsertValues(A,n);
+    Permutaciones(A, 0, n - 1);
+
+    return 0;
+}
