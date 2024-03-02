@@ -2,7 +2,7 @@
 #include "Models/BinaryTree.h"
 
 int main() {
-    BinaryTree tree;
+    BinaryTree tree; //test
 
 
     return 0;
