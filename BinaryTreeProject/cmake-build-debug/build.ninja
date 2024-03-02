@@ -61,6 +61,12 @@ build CMakeFiles/BinaryTreeProject.dir/Models/BinaryTree.cpp.obj: CXX_COMPILER__
   OBJECT_DIR = CMakeFiles\BinaryTreeProject.dir
   OBJECT_FILE_DIR = CMakeFiles\BinaryTreeProject.dir\Models
 
+build CMakeFiles/BinaryTreeProject.dir/Models/Node.cpp.obj: CXX_COMPILER__BinaryTreeProject_Debug C$:/Users/dylan_tmut0bm/Documents/ClionProyects/Labs$ ADE/BinaryTreeProject/Models/Node.cpp || cmake_object_order_depends_target_BinaryTreeProject
+  DEP_FILE = CMakeFiles\BinaryTreeProject.dir\Models\Node.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\BinaryTreeProject.dir
+  OBJECT_FILE_DIR = CMakeFiles\BinaryTreeProject.dir\Models
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target BinaryTreeProject
@@ -69,7 +75,7 @@ build CMakeFiles/BinaryTreeProject.dir/Models/BinaryTree.cpp.obj: CXX_COMPILER__
 #############################################
 # Link the executable BinaryTreeProject.exe
 
-build BinaryTreeProject.exe: CXX_EXECUTABLE_LINKER__BinaryTreeProject_Debug CMakeFiles/BinaryTreeProject.dir/main.cpp.obj CMakeFiles/BinaryTreeProject.dir/Models/BinaryTree.cpp.obj
+build BinaryTreeProject.exe: CXX_EXECUTABLE_LINKER__BinaryTreeProject_Debug CMakeFiles/BinaryTreeProject.dir/main.cpp.obj CMakeFiles/BinaryTreeProject.dir/Models/BinaryTree.cpp.obj CMakeFiles/BinaryTreeProject.dir/Models/Node.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\BinaryTreeProject.dir
