@@ -1,3 +1,3 @@
-C:/Users/dylan_tmut0bm/Documents/ClionProyects/Labs ADE/BinaryTreeProject/cmake-build-debug/CMakeFiles/BinaryTreeProject.dir
-C:/Users/dylan_tmut0bm/Documents/ClionProyects/Labs ADE/BinaryTreeProject/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/dylan_tmut0bm/Documents/ClionProyects/Labs ADE/BinaryTreeProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/UPSALAB/CLionProjects/Advanced-Data-Structure-Labs/BinaryTreeProject/cmake-build-debug/CMakeFiles/BinaryTreeProject.dir
+C:/Users/UPSALAB/CLionProjects/Advanced-Data-Structure-Labs/BinaryTreeProject/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/UPSALAB/CLionProjects/Advanced-Data-Structure-Labs/BinaryTreeProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
